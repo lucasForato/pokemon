@@ -10,7 +10,7 @@
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "docker:start": "docker compose up --build",
-    "docker:test:e2e": "docker compose up -d --build && docker exec pokemon_app npm run test:e2e",
+    "docker:test:e2e": "docker compose up -d --build && docker exec pokemon_app npm run test:e2e && docker compose down",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",

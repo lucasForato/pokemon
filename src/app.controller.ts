@@ -6,7 +6,7 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('v1/pokemon/:name')
+  @Get('api/v1/pokemon/:name')
   async handlePokeApiRequests(@Req() req: Request, @Res() res: Response) {
     const response = await this.appService.filterAbilityNameFromPokemonData(
       req['pokemonData'],

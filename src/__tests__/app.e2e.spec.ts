@@ -17,7 +17,7 @@ describe('AppController (e2e)', () => {
 
   it('/ (GET)', () => {
     return request(app.getHttpServer())
-      .get('api/v1/pokemon/ditto')
+      .get('/api/v1/pokemon/ditto')
       .expect(200)
       .expect(JSON.stringify(['limber', 'imposter']));
   });

@@ -10,7 +10,7 @@ import { NextFunction, Request, Response } from 'express';
 import { catchError, firstValueFrom } from 'rxjs';
 import { PokeApiResponse } from '../types/PokeApiResponse';
 
-const API_PREFIX = 'api/vi/';
+const API_PREFIX = 'api/v1/';
 
 @Injectable()
 export class PokeApiMiddleware implements NestMiddleware {
