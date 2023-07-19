@@ -1,12 +1,12 @@
 import { Controller, Get, Req, Res } from '@nestjs/common';
-import { AppService } from './app.service';
+import { Request, Response } from 'express';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
-
-  @Get('*')
-  handleGetRequests(@Req() req: Request, @Res() res: Response) {
-    return 'Hello people'
+  @Get('v1/:path')
+  async handleAllRequests(@Req() req: Request, @Res() res: Response) {
+    console.log('HELLO WORLD');
+    return res.send('hello');
+    // return 'hello'
   }
 }

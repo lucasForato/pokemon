@@ -2,9 +2,9 @@ import { Injectable, NestMiddleware } from '@nestjs/common';
 import { Request, Response, NextFunction } from 'express';
 
 @Injectable()
-export class BridgeMiddleware implements NestMiddleware {
+export class PokeApiMiddleware implements NestMiddleware {
   use(req: Request, res: Response, next: NextFunction) {
-    console.log('Request...');
+    console.log('Bridge...');
     next();
   }
 }
