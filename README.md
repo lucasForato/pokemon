@@ -72,7 +72,7 @@ O diagrama abaixo representa nossa aplicação e os serviços que serão utiliza
 
 ### AWS ECS e Auto-Scaling
 
-Fizemos a escolha de utilizar o serviço de orquestramento de containers provido pela AWS para atender a demanda de alta disponibilidade e custo. ECS fará o papel de levantar e derrubar containers junto do serviço de auto-scaling a partir da demanda. Fizemos a escolha de ECS e não EKS pela facilidade ao.
+Fizemos a escolha de utilizar o serviço de orquestramento de containers provido pela AWS para atender a demanda de alta disponibilidade e custo. ECS fará o papel de levantar e derrubar containers junto do serviço de auto-scaling a partir da demanda. Fizemos a escolha de ECS e não EKS pela facilidade de configuração, agilizando o nosso processo de levantar a aplicação e por não termos demandas de configuração tão avançadas em um primeiro momento.
 
 ### AWS ELB
 
