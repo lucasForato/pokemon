@@ -11,6 +11,7 @@
     "start": "nest start",
     "docker:start": "docker compose up --build",
     "docker:test:e2e": "docker compose up -d --build && docker exec pokemon_app npm run test:e2e && docker compose down",
+    "docker:test:unit": "docker compose up -d --build && docker exec pokemon_app npm run test:unit && docker compose down",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
@@ -20,7 +21,6 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./jest/jest.e2e.config.ts --passWithNoTests",
-    "test:int": "jest --config ./jest/jest.int.config.ts --passWithNoTests",
     "test:unit": "jest --config ./jest/jest.unit.config.ts --passWithNoTests"
   },
   "dependencies": {
@@ -33,6 +33,7 @@
     "rxjs": "^7.2.0"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
     "@nestjs/cli": "^9.0.0",
     "@nestjs/schematics": "^9.0.0",
     "@nestjs/testing": "^9.0.0",
