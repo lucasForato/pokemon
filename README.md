@@ -6,14 +6,34 @@ Essa aplicação tem como objetivo servir como uma ponte para algumas rotas da P
 
 Para facilitar o trabalho de reprodução, compartilhamento, hosting e desenvolvimento da aplicação, tomamos a decisão de utilizar Docker e Docker Compose.
 
-Para rodar a aplicação localmente, siga os seguintes passos:
+Para rodar a aplicação localmente, siga os passos abaixo:
 
+- Instale uma versão acima da 16 de NodeJS.
+- Instale uma versão acima da 8 do NPM.
 - Clone a aplicação localmente.
 - Acesse o diretório raiz da aplicação.
-- Rode o comando abaixo:
+- Rode os comandos abaixo:
+
+```shell
+npm install
+```
 
 ```shell
 npm run docker:start
+```
+
+## Como rodar os testes
+
+A aplicação foi desenvolvida primariamente com dois tipos de teste, end-to-end e unitários. Para rodar cada um deles, use os comandos abaixo para subir um container docker e rodar os testes nele:
+
+Testes end-to-end:
+```shell
+npm run docker:test:e2e
+```
+
+Testes unitários:
+```shell
+npm run docker:test:unit
 ```
 
 ## Documentação da API
