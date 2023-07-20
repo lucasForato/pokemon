@@ -41,7 +41,7 @@ npm run docker:test:unit
 A aplicação oferece apenas 1 rota:
 
 ```
-GET http://localhost:3000/api/v1/pokemon/{nome_do_pokemon}
+GET http://localhost:5000/api/v1/pokemon/{nome_do_pokemon}
 ```
 
 Essa rota irá retornar as habilidades do pokemon sendo buscado no formato de uma array de strings.
@@ -51,7 +51,7 @@ Essa rota irá retornar as habilidades do pokemon sendo buscado no formato de um
 Requisição:
 
 ```shell
-GET http://localhost:3000/api/v1/pokemon/pikachu
+GET http://localhost:5000/api/v1/pokemon/pikachu
 ```
 
 Retorno:
@@ -65,7 +65,7 @@ Retorno:
 Requisição:
 
 ```shell
-GET http://localhost:3000/api/v1/pokemon/ditto
+GET http://localhost:5000/api/v1/pokemon/ditto
 ```
 
 Retorno:
