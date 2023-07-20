@@ -44,7 +44,7 @@ A aplicação oferece apenas 1 rota:
 GET http://localhost:5000/api/v1/pokemon/{nome_do_pokemon}
 ```
 
-Essa rota irá retornar as habilidades do pokemon sendo buscado no formato de uma array de strings.
+Essa rota irá retornar as habilidades do pokemon que foi buscado no formato de uma array de strings.
 
 ### Exemplos de requisições
 
@@ -82,9 +82,9 @@ Como essa aplicação faz parte do core da ZRP, precisamos que ela atenda alguns
 - Velocidade de entrega das requisições
 - Baixo custo
 
-Baseando nossa decisão nesses pontos, fizemos a escolha da AWS como nosso cloud e iremos utilizar apenas serviços disponibilizados pela mesma.
+Baseando nossa decisão nesses pontos, fizemos a escolha da AWS como nosso cloud e iremos utilizar apenas seus serviços.
 
-O diagrama abaixo representa nossa aplicação e os serviços que serão utilizados para atender a demanda:
+O diagrama a seguir representa nossa aplicação e os serviços que serão utilizados para atender a demanda:
 
 ![diagrama](./arquitetura.png)
 
@@ -92,15 +92,15 @@ O diagrama abaixo representa nossa aplicação e os serviços que serão utiliza
 
 ### AWS ECS e Auto-Scaling
 
-Fizemos a escolha de utilizar o serviço de orquestramento de containers provido pela AWS para atender a demanda de alta disponibilidade e custo. ECS fará o papel de levantar e derrubar containers junto do serviço de auto-scaling a partir da demanda. Fizemos a escolha de ECS e não EKS pela facilidade de configuração, agilizando o nosso processo de levantar a aplicação e por não termos demandas de configuração tão avançadas em um primeiro momento.
+Fizemos a escolha de utilizar o serviço de orquestramento de containers provido pela AWS para atender a demanda de alta disponibilidade e de custo. ECS fará o papel de levantar e derrubar containers junto do serviço de auto-scaling a partir da demanda. Fizemos a escolha de ECS e não EKS pela facilidade de configuração, agilizando o nosso processo de levantar a aplicação e por não termos demandas de configuração tão avançadas em um primeiro momento.
 
 ### AWS ELB
 
-Utilizaremos o Elastic Load Balancer para balancear as requisições entre as instâncias EC2, garantindo maior velocidade de entrega de dados. ELB trabalha muito bem com ECS e tornam uma aplicação altamente disponível juntos.
+Utilizaremos o Elastic Load Balancer para balancear as requisições entre as instâncias EC2, garantindo maior velocidade de entrega de dados. ELB trabalha muito bem com ECS e juntos se tornam uma aplicação altamente disponível.
 
 ### AWS EC2
 
-Dentro do nosso cluster do ECS teremos instâncias EC2 que servirão as aplicações em containers Docker.
+Dentro do nosso cluster do ECS, teremos instâncias EC2 que servirão as aplicações em containers Docker.
 
 ### AWS ECR
 
